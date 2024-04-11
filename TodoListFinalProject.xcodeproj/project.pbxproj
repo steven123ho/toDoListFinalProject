@@ -13,6 +13,11 @@
 		92D77B642BC87EA70079C302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D77B622BC87EA70079C302 /* Main.storyboard */; };
 		92D77B662BC87EA80079C302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D77B652BC87EA80079C302 /* Assets.xcassets */; };
 		92D77B692BC87EA80079C302 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D77B672BC87EA80079C302 /* LaunchScreen.storyboard */; };
+		92D77B7E2BC882610079C302 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D77B7D2BC882610079C302 /* DateViewController.swift */; };
+		92D77B802BC8826C0079C302 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D77B7F2BC8826C0079C302 /* ToDoViewController.swift */; };
+		92D77B822BC8827B0079C302 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D77B812BC8827B0079C302 /* SettingsViewController.swift */; };
+		92D77B842BC8828F0079C302 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D77B832BC8828F0079C302 /* Constants.swift */; };
+		92D77B862BC882A90079C302 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D77B852BC882A90079C302 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		92D77B652BC87EA80079C302 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92D77B682BC87EA80079C302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92D77B6A2BC87EA80079C302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92D77B7D2BC882610079C302 /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		92D77B7F2BC8826C0079C302 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		92D77B812BC8827B0079C302 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		92D77B832BC8828F0079C302 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		92D77B852BC882A90079C302 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 				92D77B652BC87EA80079C302 /* Assets.xcassets */,
 				92D77B672BC87EA80079C302 /* LaunchScreen.storyboard */,
 				92D77B6A2BC87EA80079C302 /* Info.plist */,
+				92D77B7D2BC882610079C302 /* DateViewController.swift */,
+				92D77B7F2BC8826C0079C302 /* ToDoViewController.swift */,
+				92D77B812BC8827B0079C302 /* SettingsViewController.swift */,
+				92D77B832BC8828F0079C302 /* Constants.swift */,
+				92D77B852BC882A90079C302 /* TableViewController.swift */,
 			);
 			path = TodoListFinalProject;
 			sourceTree = "<group>";
@@ -138,9 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D77B802BC8826C0079C302 /* ToDoViewController.swift in Sources */,
+				92D77B7E2BC882610079C302 /* DateViewController.swift in Sources */,
 				92D77B612BC87EA70079C302 /* ViewController.swift in Sources */,
+				92D77B862BC882A90079C302 /* TableViewController.swift in Sources */,
 				92D77B5D2BC87EA70079C302 /* AppDelegate.swift in Sources */,
+				92D77B842BC8828F0079C302 /* Constants.swift in Sources */,
 				92D77B5F2BC87EA70079C302 /* SceneDelegate.swift in Sources */,
+				92D77B822BC8827B0079C302 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
