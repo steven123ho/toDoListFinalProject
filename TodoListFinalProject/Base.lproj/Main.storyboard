@@ -11,7 +11,7 @@
         <!--Contacts-->
         <scene sceneID="n1F-fm-DF9">
             <objects>
-                <viewController storyboardIdentifier="ContactController" title="Contacts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yWF-ws-P6R" customClass="ToDoViewController" customModule="ToDoListProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactController" title="Contacts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yWF-ws-P6R" customClass="ToDoViewController" customModule="TodoListFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ijt-1v-ktB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,6 +99,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="Ba7-mG-Ld4"/>
+                    <connections>
+                        <outlet property="btnChange" destination="DV7-Nj-Yqy" id="Mqe-VY-zsI"/>
+                        <outlet property="dueDate" destination="YRO-1R-YCt" id="bmo-2y-448"/>
+                        <outlet property="priorityPicker" destination="JD9-US-aIo" id="cNv-0D-FkJ"/>
+                        <outlet property="scrollView" destination="196-5G-1lb" id="IQ6-bi-ML9"/>
+                        <outlet property="sgmtEditMode" destination="Ds9-ni-BTA" id="fZL-8l-VGX"/>
+                        <outlet property="txtDescription" destination="0cr-Mj-L17" id="4Ng-5X-Iwb"/>
+                        <outlet property="txtSubject" destination="ihR-96-cz0" id="Nrt-Gm-ai7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGC-ET-oJS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,7 +116,7 @@
         <!--Tasks-->
         <scene sceneID="28d-2U-ch2">
             <objects>
-                <tableViewController id="BB2-Fz-8Dx" customClass="TableViewController" customModule="ToDoListProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="BB2-Fz-8Dx" customClass="TableViewController" customModule="TodoListFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="t45-38-1bb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
