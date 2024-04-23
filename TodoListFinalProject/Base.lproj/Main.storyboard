@@ -71,7 +71,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Change"/>
                                         <connections>
-                                            <segue destination="NBA-k4-055" kind="show" identifier="segueContactDate" id="6yd-d2-9Hz"/>
+                                            <segue destination="NBA-k4-055" kind="show" identifier="segueContactDate" id="r6k-Ij-5e4"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="01/01/1970" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRO-1R-YCt">
@@ -225,6 +225,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Due Date" id="VAt-Hc-zeD"/>
+                    <connections>
+                        <outlet property="dtpDate" destination="1yA-gl-weY" id="nO0-bD-hl4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJh-96-4x8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

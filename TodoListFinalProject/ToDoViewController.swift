@@ -85,7 +85,7 @@ class ToDoViewController: UIViewController, UITextFieldDelegate, DateControllerD
         
         
         
-        @objc func saveTask() {
+        @objc func saveContact() {
             appDelegate.saveContext()
             sgmtEditMode.selectedSegmentIndex = 0
             changeEditMode(self)
@@ -104,7 +104,7 @@ class ToDoViewController: UIViewController, UITextFieldDelegate, DateControllerD
         }
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if(segue.identifier == "segueContactDate") {
+            if segue.identifier == "segueContactDate" {
                 let dateController = segue.destination as! DateViewController
                 dateController.delegate = self
             }
