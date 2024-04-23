@@ -11,7 +11,7 @@
         <!--Contacts-->
         <scene sceneID="n1F-fm-DF9">
             <objects>
-                <viewController storyboardIdentifier="ContactController" title="Contacts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yWF-ws-P6R" customClass="ToDoViewController" customModule="TodoListFinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactController" title="Contacts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yWF-ws-P6R" customClass="ToDoViewController" customModule="TodoListFinalProject" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ijt-1v-ktB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +211,7 @@
         <!--Birthdate-->
         <scene sceneID="YzZ-Ql-zCE">
             <objects>
-                <viewController title="Birthdate" id="NBA-k4-055" customClass="DateViewController" customModule="ToDoListProject" sceneMemberID="viewController">
+                <viewController title="Birthdate" id="NBA-k4-055" customClass="DateViewController" customModule="TodoListFinalProject" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UyQ-nH-7Wd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
