@@ -52,6 +52,20 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         settings.set(sortField, forKey: Constants.kSortField)
         settings.synchronize()
     }
-   //test commit
+   
+    override func viewWillAppear(_ animated: Bool) {
+        // set the UI based on the values in UserDefaults
+        let settings = UserDefaults.standard
+        swAscending.setOn(settings.bool(forKey: Constants.kSortDirectionAscending), animated: true)
+        let sortField = settings.string(forKey: Constants.kSortField)
+        var i = 0
+        for field in sortOrderItems {
+            if field == sortField {
+                pckSortField.selectRow(i, inComponent: 0, animated: false)
+            }
+            i += 1
+        }
+        pckSortField.reloadComponent(0)
+    }
     
 }
