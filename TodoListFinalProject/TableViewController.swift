@@ -6,42 +6,64 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewController: UITableViewController {
-
+    var tasks:[NSManagedObject] = []
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        loadDataFromDatabase()
+        
     }
-
+    
+    func loadDataFromDatabase() {
+        let settings = UserDefaults.standard
+        let sortField = settings.string(forKey: Constants.kSortField)
+        let sortAscending = settings.bool(forKey: Constants.kSortDirectionAscending)
+        //Set up Core Data Context
+        let context = appDelegate.persistentContainer.viewContext
+        //Set up Request
+        let request = NSFetchRequest<NSManagedObject>(entityName: "Task")
+        //Specify sorting
+        let sortDescriptor = NSSortDescriptor(key: sortField, ascending: sortAscending)
+        let sortDescriptorArray = [sortDescriptor]
+        //to sort by multiple fields, add more sort descriptors to the array
+        request.sortDescriptors = sortDescriptorArray
+        
+        do {
+            tasks = try context.fetch(request)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return tasks.count
     }
     
     /* First Commit*/
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TasksCell", for: indexPath)
+        
         // Configure the cell...
-
+        let task = tasks[indexPath.row] as? Task
+        cell.textLabel?.text = task?.subject
+        cell.detailTextLabel?.text = task?.taskDescription
+        cell.accessoryType = .detailDisclosureButton
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
