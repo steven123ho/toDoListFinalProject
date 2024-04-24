@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contacts-->
+        <!--Task-->
         <scene sceneID="n1F-fm-DF9">
             <objects>
-                <viewController storyboardIdentifier="ContactController" title="Contacts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yWF-ws-P6R" customClass="ToDoViewController" customModule="TodoListFinalProject" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TaskController" title="Task" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yWF-ws-P6R" customClass="ToDoViewController" customModule="TodoListFinalProject" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ijt-1v-ktB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +71,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Change"/>
                                         <connections>
-                                            <segue destination="NBA-k4-055" kind="show" identifier="segueContactDate" id="r6k-Ij-5e4"/>
+                                            <segue destination="NBA-k4-055" kind="show" identifier="segueTaskDate" id="r6k-Ij-5e4"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="01/01/1970" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRO-1R-YCt">
@@ -146,7 +146,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="yWF-ws-P6R" kind="show" identifier="EditContact" trigger="accessoryAction" id="1wS-PT-A2M"/>
+                                    <segue destination="yWF-ws-P6R" kind="show" identifier="EditTask" trigger="accessoryAction" id="1wS-PT-A2M"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -158,7 +158,7 @@
                     <navigationItem key="navigationItem" title="Tasks" id="ZWh-sv-fie">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ng6-B2-g7S">
                             <connections>
-                                <segue destination="yWF-ws-P6R" kind="show" identifier="AddContact" id="ObD-lD-fKM"/>
+                                <segue destination="yWF-ws-P6R" kind="show" identifier="AddTask" id="ObD-lD-fKM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -167,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="5190" y="-106"/>
         </scene>
-        <!--Tasks-->
+        <!--Navigation-->
         <scene sceneID="sQG-oT-sYH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="3Wq-ES-nnZ" sceneMemberID="viewController">
+                <navigationController title="Navigation" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="3Wq-ES-nnZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tasks" image="checklist" catalog="system" id="ZN4-P4-hEy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4sR-89-p31">
@@ -291,7 +291,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ObD-lD-fKM"/>
+        <segue reference="1wS-PT-A2M"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checklist" catalog="system" width="128" height="107"/>

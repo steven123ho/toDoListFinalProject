@@ -85,7 +85,7 @@ class ToDoViewController: UIViewController, UITextFieldDelegate, DateControllerD
         
         
         
-        @objc func saveContact() {
+        @objc func saveTask() {
             appDelegate.saveContext()
             sgmtEditMode.selectedSegmentIndex = 0
             changeEditMode(self)
@@ -104,7 +104,7 @@ class ToDoViewController: UIViewController, UITextFieldDelegate, DateControllerD
         }
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "segueContactDate" {
+            if segue.identifier == "segueTaskDate" {
                 let dateController = segue.destination as! DateViewController
                 dateController.delegate = self
             }
@@ -134,7 +134,7 @@ class ToDoViewController: UIViewController, UITextFieldDelegate, DateControllerD
                 }
                 btnChange.isHidden = false
                 priorityPicker.isEnabled = true
-                navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(self.saveContact))
+                navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(self.saveTask))
             }
         }
         
