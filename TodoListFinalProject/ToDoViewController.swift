@@ -29,7 +29,7 @@ class ToDoViewController: UIViewController, UITextFieldDelegate, DateControllerD
             // Populates data from selecting a Task
             if currentTask != nil {
                 txtSubject.text = currentTask!.subject
-                txtDescription.text = currentTask!.description
+                txtDescription.text = currentTask!.taskDescription
                 let formatter = DateFormatter()
                 
                 //populating for date by first formatting date
