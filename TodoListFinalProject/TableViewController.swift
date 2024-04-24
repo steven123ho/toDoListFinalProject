@@ -19,6 +19,11 @@ class TableViewController: UITableViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        loadDataFromDatabase()
+        tableView.reloadData()
+    }
+    
     func loadDataFromDatabase() {
         let settings = UserDefaults.standard
         let sortField = settings.string(forKey: Constants.kSortField)
