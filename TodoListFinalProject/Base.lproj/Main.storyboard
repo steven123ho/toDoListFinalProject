@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IM5-Lz-3NX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IM5-Lz-3NX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -236,7 +236,7 @@
         <!--Settings-->
         <scene sceneID="xQX-1h-TC3">
             <objects>
-                <viewController title="Settings" id="qMg-lF-lva" customClass="SettingsViewController" customModule="ToDoListProject" sceneMemberID="viewController">
+                <viewController title="Settings" id="qMg-lF-lva" customClass="SettingsViewController" customModule="TodoListFinalProject" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ufD-YC-1zg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,6 +284,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" id="OhH-jS-5wL"/>
+                    <connections>
+                        <outlet property="pckSortField" destination="uQD-w9-ASZ" id="Kz3-ug-NSO"/>
+                        <outlet property="swAscending" destination="j2f-wS-EHj" id="xDI-wu-LH9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnm-jc-BGp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
