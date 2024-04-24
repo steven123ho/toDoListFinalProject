@@ -64,8 +64,17 @@ class TableViewController: UITableViewController {
         
         // Configure the cell...
         let task = tasks[indexPath.row] as? Task
-        cell.textLabel?.text = task?.subject
-        cell.detailTextLabel?.text = task?.taskDescription
+        cell.textLabel?.text = "\((task?.subject) ?? " ") \n \((task?.priority) ?? " ") Priority"
+        
+        
+        //Detail label for due date
+        cell.detailTextLabel?.numberOfLines = 2
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        if task?.dueDate != nil {
+            cell.detailTextLabel?.text = "Priority: \((task?.priority) ?? " ") \nDue: \(formatter.string(from: (task?.dueDate!)!))"
+        }
+        
         cell.accessoryType = .detailDisclosureButton
         return cell
     }
